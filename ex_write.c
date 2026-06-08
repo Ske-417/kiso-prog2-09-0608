@@ -9,15 +9,17 @@
 
 #include <stdio.h>
 
-int main(void) {
+int main(void)
+{
     FILE *fp = fopen("mydata.csv", "w");
 
-    if (fp == NULL) {
+    if (fp == NULL)
+    {
         printf("ファイルを開けませんでした\n");
         return 1;
     }
 
-    fprintf(fp, "Sosuke,42,3.14\n");
+    fprintf(fp, "Sosuke,42,3.1415926535 8979323846 2643383279 5028841971 6939937510 5820974944 5923078164 0628620899 8628034825 3421170679\n");
 
     fclose(fp);
     fp = NULL;
